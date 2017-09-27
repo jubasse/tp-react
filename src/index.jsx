@@ -1,9 +1,9 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { render } from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
 import App from './app'
 
-ReactDOM.render(
+render(
   <AppContainer>
     <App/>
   </AppContainer>,
@@ -14,7 +14,7 @@ ReactDOM.render(
 if (module.hot) {
   module.hot.accept('./app', () => {
     const NextApp = require('./app').default;
-    ReactDOM.render(
+    render(
       <AppContainer>
         <NextApp/>
       </AppContainer>,
